@@ -407,6 +407,29 @@ function PlasmicHomepage__RenderFunc(props: {
                                   >
                                     {"Squeez"}
                                   </p.PlasmicLink>
+
+                                  <p.PlasmicLink
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.a,
+                                      projectcss.__wab_text,
+                                      sty.link__i9F7X
+                                    )}
+                                    component={Link}
+                                    href={`/book/${(() => {
+                                      try {
+                                        return currentItem.fields.slug;
+                                      } catch (e) {
+                                        if (e instanceof TypeError) {
+                                          return "article-1";
+                                        }
+                                        throw e;
+                                      }
+                                    })()}`}
+                                    platform={"nextjs"}
+                                  >
+                                    {"Book"}
+                                  </p.PlasmicLink>
                                 </div>
                               </div>
                             </div>
