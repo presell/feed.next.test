@@ -56,8 +56,6 @@ export const PlasmicBook__ArgProps = new Array<ArgPropType>();
 export type PlasmicBook__OverridesType = {
   root?: p.Flex<"div">;
   httpApiFetcher?: p.Flex<typeof DataFetcher>;
-  freeBox?: p.Flex<"div">;
-  navLogoOnly?: p.Flex<typeof NavLogoOnly>;
   calendarEmbed?: p.Flex<typeof Embed>;
 };
 
@@ -187,15 +185,12 @@ function PlasmicBook__RenderFunc(props: {
           >
             <ph.DataCtxReader>
               {$ctx => (
-                <div
-                  data-plasmic-name={"freeBox"}
-                  data-plasmic-override={overrides.freeBox}
-                  className={classNames(projectcss.all, sty.freeBox)}
-                >
+                <div className={classNames(projectcss.all, sty.freeBox__moJOk)}>
                   <NavLogoOnly
-                    data-plasmic-name={"navLogoOnly"}
-                    data-plasmic-override={overrides.navLogoOnly}
-                    className={classNames("__wab_instance", sty.navLogoOnly)}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.navLogoOnly__ewO9U
+                    )}
                   />
 
                   <Embed
@@ -215,6 +210,17 @@ function PlasmicBook__RenderFunc(props: {
                       }
                     })()}
                   />
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__hiupu)}
+                  >
+                    <NavLogoOnly
+                      className={classNames(
+                        "__wab_instance",
+                        sty.navLogoOnly__vwe45
+                      )}
+                    />
+                  </div>
                 </div>
               )}
             </ph.DataCtxReader>
@@ -226,10 +232,8 @@ function PlasmicBook__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "httpApiFetcher", "freeBox", "navLogoOnly", "calendarEmbed"],
-  httpApiFetcher: ["httpApiFetcher", "freeBox", "navLogoOnly", "calendarEmbed"],
-  freeBox: ["freeBox", "navLogoOnly", "calendarEmbed"],
-  navLogoOnly: ["navLogoOnly"],
+  root: ["root", "httpApiFetcher", "calendarEmbed"],
+  httpApiFetcher: ["httpApiFetcher", "calendarEmbed"],
   calendarEmbed: ["calendarEmbed"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -238,8 +242,6 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   httpApiFetcher: typeof DataFetcher;
-  freeBox: "div";
-  navLogoOnly: typeof NavLogoOnly;
   calendarEmbed: typeof Embed;
 };
 
@@ -305,8 +307,6 @@ export const PlasmicBook = Object.assign(
   {
     // Helper components rendering sub-elements
     httpApiFetcher: makeNodeComponent("httpApiFetcher"),
-    freeBox: makeNodeComponent("freeBox"),
-    navLogoOnly: makeNodeComponent("navLogoOnly"),
     calendarEmbed: makeNodeComponent("calendarEmbed"),
 
     // Metadata about props expected for PlasmicBook
