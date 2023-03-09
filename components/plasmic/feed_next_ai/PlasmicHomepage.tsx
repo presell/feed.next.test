@@ -117,6 +117,15 @@ function PlasmicHomepage__RenderFunc(props: {
         body {
           margin: 0;
         }
+        .PlasmicHomepage_link__z2ZhS__XwYTX:hover {
+          color: #3ceb35 !important;
+      }
+      .PlasmicHomepage_link__uo40__6hcFv:hover {
+        color: #3ceb35 !important;
+    }
+    .PlasmicHomepage_link__i9F7X__qWPoA:hover {
+      color: #3ceb35 !important;
+  }
       `}</style>
 
       <div className={projectcss.plasmic_page_wrapper}>
